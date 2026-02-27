@@ -417,7 +417,7 @@ export default function App() {
               <span className="italic text-gold mt-4 block">Sua vida pode ser digna e verdadeira mais uma vez.</span>
             </h2>
             <button
-              onClick={() => window.open('https://wa.me/554797479921?text=Ol%C3%A1%2C%20Eliz%C3%A2ngela!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20iniciar%20minha%20jornada.', '_blank')}
+              onClick={() => window.open('https://wa.me/5512991475679?text=Ol%C3%A1%2C%20Eliz%C3%A2ngela!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20iniciar%20minha%20jornada.', '_blank')}
               className="bg-transparent hover:bg-gold text-gold hover:text-petroleum border border-gold px-12 py-6 font-sans font-light tracking-[0.2em] uppercase text-xs transition-all duration-700 w-full sm:w-auto mt-4 backdrop-blur-sm"
             >
               Falar com o Suporte
