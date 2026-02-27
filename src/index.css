@@ -1,23 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-script: "Great Vibes", cursive;
 
-  --color-offwhite: #FFFFFF;
-  --color-beige: #F5F6F8;
-  --color-charcoal: #151921;
-  --color-sage: #E2E4E9;
-  --color-terracotta: #C19B6C;
-  /* Gold/Champagne */
-  --color-teal: #0D1623;
-  /* Deep Midnight Navy */
+  /* New Palette */
+  --color-petroleum: #0F5250;
+  --color-teal: #0A3C3A;
+  /* Darker variant for backgrounds */
+  --color-sage: #146B68;
+  /* Lighter variant for borders/accents */
+  --color-ice: #EAEAEA;
+  --color-gold: #C9A646;
+  --color-gold-light: #DFBA5A;
+
+  /* Legacy remappings (to avoid breaking things unexpectedly if missed) */
+  --color-offwhite: #0F5250;
+  --color-beige: #0A3C3A;
+  --color-charcoal: #EAEAEA;
+  --color-terracotta: #C9A646;
 }
 
 body {
-  background-color: var(--color-offwhite);
-  color: var(--color-charcoal);
+  background-color: var(--color-petroleum);
+  color: var(--color-ice);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,22 +42,21 @@ h6 {
 
 /* Custom Premium Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-offwhite);
-  border-left: 1px solid var(--color-sage);
+  background: var(--color-teal);
+  border-left: 1px solid var(--color-petroleum);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-terracotta);
-  border-radius: 20px;
+  background: var(--color-gold);
+  border-radius: 10px;
   opacity: 0.8;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A6835B;
-  /* Slightly darker terracotta */
+  background: var(--color-gold-light);
 }
