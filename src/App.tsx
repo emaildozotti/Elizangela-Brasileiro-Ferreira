@@ -235,9 +235,9 @@ export default function App() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             <FadeIn className="w-full lg:w-1/3">
-              <h2 className="text-sm font-sans tracking-[0.3em] uppercase text-gold mb-6 relative">
+              <h2 className="text-sm font-sans tracking-[0.3em] uppercase text-gold mb-6 relative flex items-center gap-4">
                 <span className="relative z-10 bg-petroleum pr-4">O Método</span>
-                <span className="absolute top-1/2 left-0 w-full h-px bg-gold/30 -z-0"></span>
+                <span className="flex-1 h-px bg-gold/20"></span>
               </h2>
               <h3 className="text-4xl md:text-5xl font-serif font-light mb-8 italic">
                 O Caminho do Reencontro
@@ -247,16 +247,25 @@ export default function App() {
               </p>
             </FadeIn>
 
-            <div className="w-full lg:w-2/3 grid sm:grid-cols-2 gap-8">
+            <div className="w-full lg:w-2/3 flex flex-col gap-12 relative">
+              {/* Vertical line for mobile flow */}
+              <div className="absolute left-[1.15rem] top-10 bottom-10 w-px bg-gradient-to-b from-gold/40 via-gold/10 to-transparent"></div>
+
               {[
                 { num: "I", title: "Análise Corporal", desc: "Seu corpo explica como sua mente funciona. Através do formato do seu corpo, entendemos seus traços, medos e forças." },
                 { num: "II", title: "Consciência Emocional", desc: "Vamos identificar os padrões de dependência e autonegligência que você repete há anos, para desenvolver autoria sobre sua vida." },
                 { num: "III", title: "Espiritualidade", desc: "Uma visão baseada no Amor e no Livre Arbítrio, não na culpa religiosa. Ressignificamos sua fé como fonte de força." }
               ].map((pillar, i) => (
-                <FadeIn key={i} delay={i * 0.15} className="border-l border-gold/30 pl-8 pb-8">
-                  <div className="font-serif italic text-gold text-2xl mb-4">{pillar.num}.</div>
-                  <h4 className="font-serif text-2xl mb-4 text-ice">{pillar.title}</h4>
-                  <p className="text-ice/50 font-light leading-relaxed">{pillar.desc}</p>
+                <FadeIn key={i} delay={i * 0.15} className="relative pl-12">
+                  {/* Step Marker */}
+                  <div className="absolute left-0 top-0 w-10 h-10 rounded-full border border-gold/30 bg-petroleum flex items-center justify-center z-10">
+                    <span className="font-serif italic text-gold text-sm">{pillar.num}</span>
+                  </div>
+
+                  <div className="bg-teal/20 backdrop-blur-sm p-8 border border-ice/5 hover:border-gold/30 transition-colors duration-500">
+                    <h4 className="font-serif text-2xl mb-4 text-ice font-light">{pillar.title}</h4>
+                    <p className="text-ice/50 font-light leading-relaxed">{pillar.desc}</p>
+                  </div>
                 </FadeIn>
               ))}
             </div>
