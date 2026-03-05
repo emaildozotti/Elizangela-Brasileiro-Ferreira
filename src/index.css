@@ -1,10 +1,18 @@
+@font-face {
+  font-family: 'Amoresa Aged';
+  src: url('./assets/fonts/amoresa-aged.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-script: "Great Vibes", cursive;
+  --font-script: "Amoresa Aged", "Great Vibes", cursive;
 
   /* New Palette */
   --color-petroleum: #0F5250;

@@ -73,7 +73,7 @@ export default function App() {
             {/* Monogram / Logo */}
             <FadeIn className="mb-12">
               <div className="inline-flex flex-col items-center lg:items-start">
-                <span className="font-['Great_Vibes'] text-6xl text-gold mb-2 leading-none">EB</span>
+                <span className="font-script text-6xl text-gold mb-2 leading-none">EB</span>
                 <span className="text-xs uppercase tracking-[0.3em] font-light text-ice/60">Analista Corporal</span>
               </div>
             </FadeIn>
@@ -196,7 +196,7 @@ export default function App() {
                 >
                   {/* Minimalist "Play" Cover */}
                   <div className="flex flex-col items-center">
-                    <span className="font-['Great_Vibes'] text-7xl text-gold/20 mb-4 group-hover:text-gold/40 transition-colors duration-700">EB</span>
+                    <span className="font-script text-7xl text-gold/20 mb-4 group-hover:text-gold/40 transition-colors duration-700">EB</span>
                     <div className="w-16 h-16 rounded-full border border-gold/40 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                       <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[12px] border-l-gold ml-1"></div>
                     </div>
@@ -452,7 +452,7 @@ export default function App() {
         <div className="flex-1 w-full max-w-4xl mx-auto relative z-10 flex flex-col items-center justify-center">
           <FadeIn>
             <div className="mb-12 opacity-50">
-              <span className="font-['Great_Vibes'] text-6xl text-gold">EB</span>
+              <span className="font-script text-6xl text-gold">EB</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif font-light mb-16 leading-[1.2] text-ice">
               Você não precisa continuar carregando esse peso. <br className="hidden md:block" />
@@ -470,7 +470,7 @@ export default function App() {
         <div className="w-full max-w-6xl mx-auto pt-20 border-t border-gold/10 mt-20 relative z-10">
           <FadeIn delay={0.4} className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-left">
-              <span className="font-['Great_Vibes'] text-3xl text-gold mr-4">Elizângela Brasileiro</span>
+              <span className="font-script text-3xl text-gold mr-4">Elizângela Brasileiro</span>
               <span className="text-ice/40 text-[10px] tracking-[0.2em] uppercase font-light border-l border-gold/20 pl-4">Analista Corporal</span>
             </div>
 
