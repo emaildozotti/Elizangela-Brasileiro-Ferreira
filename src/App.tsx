@@ -43,6 +43,8 @@ const AccordionItem = ({ question, answer }: { question: string, answer: string 
 };
 
 export default function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div className="min-h-screen bg-petroleum text-ice font-sans selection:bg-gold/20">
 
@@ -185,15 +187,55 @@ export default function App() {
             <h3 className="text-3xl md:text-5xl font-serif font-light text-ice italic">Um recado muito importante para você</h3>
           </FadeIn>
 
-          <FadeIn className="relative max-w-4xl mx-auto">
-            <div className="aspect-video bg-teal/50 border border-gold/20 flex flex-col items-center justify-center relative group cursor-pointer hover:border-gold/50 transition-colors duration-700">
-              <div className="absolute inset-4 border border-ice/5 pointer-events-none"></div>
+          <FadeIn className="relative max-w-[360px] mx-auto">
+            <div className="relative aspect-[9/16] bg-teal border border-gold/30 overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] group">
+              {!isPlaying ? (
+                <div
+                  className="absolute inset-0 z-20 cursor-pointer flex flex-col items-center justify-center bg-petroleum hover:bg-teal transition-colors duration-1000"
+                  onClick={() => setIsPlaying(true)}
+                >
+                  {/* Minimalist "Play" Cover */}
+                  <div className="flex flex-col items-center">
+                    <span className="font-['Great_Vibes'] text-7xl text-gold/20 mb-4 group-hover:text-gold/40 transition-colors duration-700">EB</span>
+                    <div className="w-16 h-16 rounded-full border border-gold/40 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                      <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[12px] border-l-gold ml-1"></div>
+                    </div>
+                    <span className="mt-8 font-serif italic text-gold tracking-widest text-sm opacity-60 group-hover:opacity-100 transition-opacity duration-700">ASSISTIR AGORA</span>
+                  </div>
 
-              <div className="w-20 h-20 rounded-full border-2 border-gold flex items-center justify-center group-hover:bg-gold/10 transition-colors duration-500 z-10">
-                <PlayCircle className="w-8 h-8 text-gold" strokeWidth={1} />
+                  {/* Esthetic Lines */}
+                  <div className="absolute top-8 left-8 bottom-8 right-8 border border-gold/5 pointer-events-none"></div>
+                </div>
+              ) : (
+                <div className="absolute inset-0 w-full h-full bg-black overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/_zmLitZ8oSI?autoplay=1&modestbranding=1&rel=0&iv_load_policy=3"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '0',
+                      width: '100%',
+                      height: '130%',
+                      transform: 'translateY(-50%)',
+                      border: 'none',
+                    }}
+                  ></iframe>
+                </div>
+              )}
+
+              {/* Gold Accent Corner */}
+              <div className="absolute top-0 right-0 w-16 h-16 pointer-events-none z-30">
+                <div className="absolute top-4 right-4 w-4 h-[1px] bg-gold/50"></div>
+                <div className="absolute top-4 right-4 w-[1px] h-4 bg-gold/50"></div>
               </div>
-              <p className="mt-6 font-sans font-light tracking-[0.3em] text-ice/40 uppercase text-[10px] z-10">Assistir ao Vídeo</p>
             </div>
+
+            {/* Elegant Subtext */}
+            <p className="text-center mt-6 text-[10px] text-gold/40 tracking-[0.4em] uppercase font-light">Resgate sua identidade &bull; Vídeo com áudio</p>
           </FadeIn>
         </div>
       </section>
